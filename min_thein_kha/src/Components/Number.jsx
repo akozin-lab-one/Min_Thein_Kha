@@ -58,10 +58,10 @@ export const Number = () => {
     setIsModalOpen(false);
   };
 
-  if (JSON.stringify(number) !== "[]") {
+  if (JSON.stringify(number) !== "[]" && JSON.stringify(answer) !== "[]") {
     return (
       <div className="h-screen flex justify-center items-center">
-        <div className=" container w-[43%]">
+        <div className=" container  lg:w-[43%] w-[380px] mx-auto">
           <div className="my-3">
             <NavLink to="/">
               <p className="bg-black w-28 text-center rounded drop-shadow h-[28px] mx-auto text-white">
@@ -70,12 +70,12 @@ export const Number = () => {
             </NavLink>
             <h3 className="text-center my-3">{title[questionNum.id - 1]}</h3>
           </div>
-          <div className="grid grid-cols-9 gap-y-3 gap-x-16 w-96">
+          <div className="grid grid-cols-9 gap-y-3 gap-x-3 lg:gap-x-5 w-96  w-[100%]">
             {number.map((num, index) => {
               return [
                 <button
                   key={index}
-                  className="bg-black w-12 rounded hover:scale-110 hover:drop-shadow duration-75 text-white"
+                  className="bg-black w-8 lg:w-12 rounded hover:scale-110 hover:drop-shadow duration-75 text-white text-xs lg:text-base"
                   type="button"
                   onClick={() =>
                     openModal(Math.floor(Math.random() * (max - min + 1)) + min)

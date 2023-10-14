@@ -21,7 +21,6 @@ const Main = ({setItems, SearchQueo, searchList, query}) => {
     getQue();
   }, []);
   
-console.log(query);
 
   if (JSON.stringify(showdata) !== "[]") {
     return (
