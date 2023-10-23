@@ -5,7 +5,7 @@ import DataContext from "../Context/DataContext";
 
 export const Number = () => {
   const mainData = useContext(DataContext);
-  // console.log(mainData);
+  console.log(mainData);
   const questionNum = useParams();
   // console.log(parseInt(questionNum.id));
   const title = mainData.map((mainda) =>
@@ -13,7 +13,7 @@ export const Number = () => {
       ? mainda.questionName
       : "no title"
   );
-  // console.log(title[questionNum.id - 1]);
+  console.log(title);
   const [number, setNumber] = useState([]);
   const showNumber = async () => {
     const res = await api.get("/numberList");

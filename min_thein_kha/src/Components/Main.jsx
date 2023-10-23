@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { api } from "../api/apiResource";
 import List from "./List";
 import { useLocation } from "react-router";
-// import { api } from './../api/apiResource';
 
 const Main = ({setItems, SearchQueo, searchList, query}) => {
   let location = useLocation();
   console.log(location.pathname);
+  console.log("component is loading")
 
   const [showdata, setShowData] = useState([]);
   const getQue = async () => {
